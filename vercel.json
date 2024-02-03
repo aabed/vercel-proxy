@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "proxy": {
+      "handler": "index.proxy",
+      "includeFiles": "true"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/proxy/$1" }
+  ]
+}
