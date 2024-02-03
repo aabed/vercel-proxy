@@ -1,11 +1,11 @@
 {
   "functions": {
-    "proxy": {
-      "handler": "index.proxy",
-      "includeFiles": "true"
+    "api/proxy": {
+      "runtime": "node@14",
+      "memory": 1024
     }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/proxy/$1" }
+    { "src": "/api/proxy/(.*)", "dest": "api/proxy/$1" }
   ]
 }
